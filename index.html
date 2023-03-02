@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Receitas Saudáveis</title>
+
+ 
+      
+    <style>
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.menu button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu button:last-child {
+  margin-right: 0;
+}
+
+.menu button:hover {
+  background-color: #aaa;
+}
+
+.menu button.ativo {
+  background-color: #555;
+}
+
+.menu button.ativo:hover {
+  background-color: #555;
+}
+
+        /* torna as imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ajusta o tamanho da fonte de acordo com a largura da tela */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #E6E6FA;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #4B0082;
+      }
+
+      nav {
+        background-color: #4B0082;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      h2 {
+        color: #4B0082;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin: 10px 0 10px 20px;
+      }
+
+      ol {
+        list-style-type: decimal;
+        margin: 10px 0 10px 20px;
+      }
+
+      #receita-do-dia {
+        background-color: #E6E6FA;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      #receita-do-dia h2 {
+        color: #4B0082;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Receitas Saudáveis</h1>
+    </header>
+    <nav>
+      <a href="#" onclick="mostrarReceita('segunda')">Segunda-feira</a>
+      <a href="#" onclick="mostrarReceita('terca')">Terça-feira</a>
+      <a href="#" onclick="mostrarReceita('quarta')">Quarta-feira</a>
+      <a href="#" onclick="mostrarReceita('quinta')">Quinta-feira</a>
+      <a href="#" onclick="mostrarReceita('sexta')">Sexta-feira</a>
+      <a href="#" onclick="mostrarReceita('sabado')">Sábado</a>
+      <a href="#" onclick="mostrarReceita('domingo')">Domingo</a>
+    </nav>
+    <main>
+      <div id="receita-do-dia">
+        <p>Escolha um dia da semana para ver a receita.</p>
+      </div>
+    </main>
+    <script>
+      function mostrarReceita(dia) {
+        let receita;
+        switch (dia) {
+          case "segunda":
+            receita = "<h2>Salada de Grão de Bico</h2><p>Ingredientes:</p><ul><li>2 xícaras de grão de bico cozido</li><li>1 xícara de tomates cereja</li><li>1 pepino</li><li>1/2 cebola roxa</li><li>3 xícaras de espinafre picado</li><li>Para o molho:</li><li>1/4 xícara de tahine</li><li>1/4 xícara de água        </ul><p>Modo de preparo:</p><ol><li>Corte o tomate cereja em quatro partes e o pepino em rodelas.</li><li>Pique a cebola roxa em cubos pequenos.</li><li>Em uma tigela grande, misture o grão de bico, o tomate cereja, o pepino, a cebola roxa e o espinafre.</li><li>Em um recipiente separado, misture o tahine e a água até obter uma consistência suave. Despeje o molho sobre a salada e misture bem.</li><li>Tempere com sal e pimenta a gosto e sirva.</li></ol>";
+        break;
+      case "terca":
+        receita = "<h2>Wrap de Frango Grelhado</h2><p>Ingredientes:</p><ul><li>2 tortilhas de trigo integral</li><li>1/2 xícara de frango grelhado desfiado</li><li>1/2 xícara de alface picada</li><li>1/2 xícara de tomate picado</li><li>1/4 xícara de queijo cheddar ralado</li><li>1/4 xícara de cebola picada</li><li>Molho:</li><li>1/4 xícara de maionese light</li><li>1/4 xícara de iogurte grego</li><li>1 colher de sopa de mostarda amarela</li><li>1 colher de sopa de suco de limão</li><li>1/4 colher de chá de sal</li><li>1/4 colher de chá de pimenta do reino</li></ul><p>Modo de preparo:</p><ol><li>Misture a maionese, o iogurte grego, a mostarda, o suco de limão, o sal e a pimenta em um recipiente.</li><li>Adicione o frango, a alface, o tomate, o queijo e a cebola à mistura de molho e mexa até que estejam bem combinados.</li><li>Coloque metade do recheio em cada tortilha e enrole as tortilhas para formar um wrap.</li><li>Grelhe os wraps em uma frigideira em fogo médio-alto até que estejam dourados e crocantes.</li><li>Corte cada wrap ao meio e sirva.</li></ol>";
+        break;
+      case "quarta":
+        receita = "<h2>Tilápia Grelhada com Legumes Assados</h2><p>Ingredientes:</p><ul><li>2 filés de tilápia</li><li>1 abobrinha</li><li>1 berinjela</li><li>1 pimentão vermelho</li><li>1 cebola</li><li>1 limão</li><li>1/4 xícara de azeite de oliva</li><li>2 dentes de alho picados</li><li>1 colher de chá de sal</li><li>1/2 colher de chá de pimenta do reino</li><li>1 colher de sopa de salsa fresca picada</li></ul><p>Modo de preparo:</p><ol><li>Corte a abobrinha, a berinjela, o pimentão e a cebola em pedaços grandes.</li><li>Em uma tigela, misture o azeite, o alho, o suco de limão, o sal e a pimenta.</li><li>Adicione os legumes à tigela e misture até que estejam completamente revestidos com o molho.</li><li>Pré-aqueça o forno a 200°C.</li><li>Cubra uma assadeira com papel alumínio e espalhe os legumes na assadeira.</li><li>Asse por cerca de 25 a 30 minutos ou até que os legumes estejam macios e dourados.</li><li>Tempere os filés de tilápia com sal e pimenta.</li><li>Grelhe os filés de tilápia em uma grelha pré-aquecida em fogo médio-alto por cerca de 3 a 4 minutos de cada lado ou até que estejam cozidos.</li><li>Sirva os filés de tilápia com os legumes assados e salpique a salsa fresca por cima.</li></ol>";
+break;
+case "quinta":
+receita = "<h2>Salada de Atum com Feijão Branco</h2><p>Ingredientes:</p><ul><li>1 lata de atum em água</li><li>1 lata de feijão branco</li><li>1/4 xícara de cebola picada</li><li>1/4 xícara de pimentão vermelho picado</li><li>1/4 xícara de azeitonas pretas fatiadas</li><li>2 colheres de sopa de azeite de oliva</li><li>1 colher de sopa de vinagre de vinho tinto</li><li>1 colher de chá de mostarda dijon</li><li>1/4 colher de chá de sal</li><li>1/4 colher de chá de pimenta do reino</li></ul><p>Modo de preparo:</p><ol><li>Em uma tigela, misture o atum, o feijão branco, a cebola, o pimentão e as azeitonas.</li><li>Em outra tigela, misture o azeite de oliva, o vinagre de vinho tinto, a mostarda, o sal e a pimenta.</li><li>Despeje o molho sobre a salada e misture bem.</li><li>Deixe a salada descansar na geladeira por pelo menos 30 minutos antes de servir.</li></ol>";
+break;
+case "sexta":
+receita = "<h2>Frango Grelhado com Legumes Salteados</h2><p>Ingredientes:</p><ul><li>2 filés de peito de frango</li><li>1 abobrinha</li><li>1 pimentão vermelho</li><li>1 cebola</li><li>1 dente de alho picado</li><li>2 colheres de sopa de azeite de oliva</li><li>1 colher de sopa de suco de limão</li><li>1 colher de chá de sal</li><li>1/4 colher de chá de pimenta do reino</li></ul><p>Modo de preparo:</p><ol><li>Corte a abobrinha, o pimentão e a cebola em pedaços grandes.</li><li>Em uma frigideira grande, aqueça o azeite de oliva em fogo médio-alto.</li><li>Adicione os legumes e o alho à frigideira e cozinhe, mexendo ocasionalmente, por cerca de 5 minutos ou até que estejam macios e levemente dourados.</li><li>Tempere os filés de frango com sal e pimenta.</li><li>Grelhe os filés de frango em uma grelha pré-aquecida em fogo médio-alto por cerca de 6 a 7 minutos de cada lado ou até que estejam cozidos.</li><li>Sirva os filés de frango com os legumes salteados e regue com o suco de limão.</li></ol>";
+break;
+case "sabado":
+receita = "<h2>Tacos de Peixe com Coleslaw de Repolho Roxo</h2><p>Ingredientes:</p><ul><li>4 filés de peixe branco</li><li>1 colher de sopa de azeite de oliva</li><li>1 colher de sopa de suco de limão</li><li>1 colher de chá de cominho em pó</li><li>1/2 colher de chá de páprica</li><li>1/4 colher de chá de sal</li><li>1/4 colher de chá de pimenta do reino</li><li>8 tortilhas de milho</li><li>1 xícara de coleslaw de repolho roxo</li></ul><p>Modo de preparo:</p><ol><li>Tempere os filés de peixe com azeite de oliva, suco de limão, cominho em pó, páprica, sal e pimenta do reino.</li><li>Grelhe os filés de peixe em uma grelha pré-aquecida em fogo médio-alto por cerca de 3 a 4 minutos de cada lado ou até que estejam cozidos.</li><li>Aqueça as tortilhas de milho em uma frigideira.</li><li>Monte os tacos colocando uma porção de peixe em cada tortilha e cubra com coleslaw de repolho roxo.</li></ol>";
+break;
+case "domingo":
+receita = "<h2>Frango Assado com Batatas e Brócolis</h2><p>Ingredientes:</p><ul><li>4 coxas de frango com pele e osso</li><li>4 batatas médias, cortadas em cubos</li><li>2 xícaras de brócolis em floretes</li><li>2 dentes de alho picados</li><li>2 colheres de sopa de azeite de oliva</li><li1 colher de chá de sal</li><li>1/4 colher de chá de pimenta do reino</li></ul><p>Modo de preparo:</p><ol><li>Pré-aqueça o forno a 200°C.</li><li>Tempere as coxas de frango com sal e pimenta.</li><li>Em uma assadeira grande, misture as batatas cortadas em cubos, os floretes de brócolis, o alho picado e o azeite de oliva.</li><li>Tempere com sal e pimenta e misture tudo bem.</li><li>Coloque as coxas de frango sobre a mistura de batatas e brócolis.</li><li>Asse no forno pré-aquecido por cerca de 35 a 40 minutos ou até que o frango esteja cozido e dourado.</li><li>Sirva o frango assado com as batatas e o brócolis.</li></ol>";
+break;
+}
+
+    // exibe a receita correspondente no HTML
+    document.getElementById("receita").innerHTML = receita;
+  }
+</script>
+</head>
+<body>
+  <h1>Receitas Saudáveis</h1>
+  <p>Escolha um dia da semana:</p>
+  <select id="dias" onchange="mostrarReceita()">
+    <option value="segunda">Segunda-feira</option>
+    <option value="terca">Terça-feira</option>
+    <option value="quarta">Quarta-feira</option>
+    <option value="quinta">Quinta-feira</option>
+    <option value="sexta">Sexta-feira</option>
+    <option value="sabado">Sábado</option>
+    <option value="domingo">Domingo</option>
+  </select>
+  <div id="receita"></div>
+</body>
+</html>
